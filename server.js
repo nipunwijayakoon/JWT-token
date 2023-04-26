@@ -1,3 +1,6 @@
+//authentication- verifying who someone is
+//authorization- verifying what specific resources a user has access to
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -6,7 +9,7 @@ const corsOptions = require("./config/corsOptions");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const verifyJWT = require("./middleware/verifyJWT");
-const credentials = require('./middleware/credentials')
+const credentials = require("./middleware/credentials");
 const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT || 3500;
